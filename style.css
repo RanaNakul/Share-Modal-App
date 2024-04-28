@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Circle1{
+    background: rgb(223,79,97);
+    background: linear-gradient(350deg, rgba(223,79,97,1) 0%, rgba(230,88,85,1) 49%, rgba(238,96,73,1) 100%); 
+    animation: animationCircle1 3s ease-in-out 0s infinite alternate;
+}
+
+.Circle2{
+    background: rgb(97,70,227);
+    background: linear-gradient(10deg, rgba(97,70,227,1) 26%, rgba(113,67,229,1) 50%, rgba(124,66,240,1) 77%);
+    animation: animationCircle2 2s linear 0s infinite alternate;
+}
+
+@keyframes animationCircle1 {
+    0%{
+        translate: -10px 10px; 
+        scale: 0.9;
+    }
+    100%{
+        translate: 10px -7px; 
+        scale: 1;
+    }
+}
+@keyframes animationCircle2 {
+    0%{
+        translate: 6px 6px; 
+    }
+    100%{
+        translate: -10px -10px; 
+    }
+}
+
+
+.modal{
+    scale: 0;
+    transition: 0.5s ease-in-out;
+    translate: -50% -50%;
+}
+
+.modalActive{ 
+    scale: 1;
+}
+.Overlay{
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.OverlayActive{
+    opacity: 1;
+    pointer-events: initial;
+}

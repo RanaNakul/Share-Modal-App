@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="bg-black min-w-full h-[100vh]">
+
+        <!-- Circle1 -->
+        <div class="w-[170px] h-[170px]  rounded-full blur-[1px]  absolute top-8 left-[30%]
+        shadow-[0_0px_40px_0px_rgba(236,68,68,1)] Circle1"></div>
+        <!-- Circle2 -->
+        <div class="w-[200px] h-[200px] bg-purple-800 rounded-full blur-[1px] absolute bottom-10 right-[25%]
+            shadow-[0_0px_30px_0px_rgba(97,70,227,1)] Circle2"></div>
+
+        <div class="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  
+          w-[400px] h-[400px]  rounded-lg z-[2] flex flex-col items-center pt-10 backdrop-blur-sm
+         bg-white bg-opacity-15 border-[2px] border-[#bdb9bd] border-opacity-20">
+
+            <img src="./IMG_20200911_223509_536.jpg" alt="" class="w-[150px] rounded-full border-[2px] border-[#bdb9bd] border-opacity-20">
+            <h2 class="text-white pt-6 text-3xl font-semibold" >Nakul Rana</h2>
+            <p class="text-[#bebec4] text-lg pt-6 font-semibold">Software Engineer </p>
+            <div class="text-[#bebec4] text-sm pt-6 font-medium " >
+                <button class="border-[2px] border-[#bebec4] py-1 px-3 rounded-md w-[70] hover:bg-[#bebec4] hover:text-[#292928] " 
+                    onclick="openModal()">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40px"><path d="M503.7 189.8L327.7 37.9C312.3 24.5 288 35.3 288 
+                        56v80.1C127.4 137.9 0 170.1 0 322.3c0 61.4 39.6 122.3 83.3 154.1 13.7 9.9 33.1-2.5 28.1-18.6C66.1 312.8 132.9 274.3 
+                        288 272.1V360c0 20.7 24.3 31.5 39.7 18.2l176-152c11.1-9.6 11.1-26.8 0-36.3z"/>
+                    </svg> -->
+                    <i class="fas fa-share"></i>
+                    Share My Profile
+                </button>
+                <button class="border-[2px] border-[#bebec4] py-1 px-10 rounded-md min-w-[70] hover:bg-[#bebec4]
+                    hover:text-[#292928]">
+                    Follow Me
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal Component -->
+
+        <div class="fixed top-[50%] left-[50%]  bg-black bg-opacity-70 z-[10] w-[500px] p-6 
+                text-white backdrop-blur-sm rounded-lg border-2 border-[#787778] border-opacity-50 modal ">
+                <div class="text-xl font-semibold flex justify-between items-center pb-3 border-b-[1px] border-white  " > 
+                    <div>
+                        Share My Profile
+                    </div>
+                    <button class="cursor-pointer " >
+                        <i  onclick="closeModal()"  class="fa-solid fa-xmark" ></i>
+                    </button>
+                </div>
+                <div class="py-4 font-medium ">
+                    <h3>Share this via</h3>
+                </div>
+                <ul class="flex items-center justify-between py-3">
+                    <il>
+                        <a class="border border-[#1877F2] py-3 px-5 rounded-full text-[#1877F2] text-lg hover:bg-[#1877F2] hover:text-white" href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </il>
+                    <il>
+                        <a class="border border-[#1DA1F2] py-3 px-4 rounded-full text-[#1DA1F2] text-xl hover:bg-[#1DA1F2] hover:text-white" 
+                            href="https://twitter.com/NakulRana__" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </il>
+                    <il>
+                        <a class="border border-[#C13584] py-3 px-4 rounded-full text-[#C13584] text-xl hover:bg-[#C13584] hover:text-white" href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </il>
+                    <il>
+                        <a class="border border-[#25D366] py-3 px-4 rounded-full text-[#25D366] text-xl hover:bg-[#25D366] hover:text-white" href="#">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </il>
+                    <il>
+                        <a class="border border-[#0088cc] py-3 px-4 rounded-full text-[#0088cc] text-xl hover:bg-[#0088cc] hover:text-white" href="#">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                    </il>
+                    
+    
+                </ul>
+    
+        </div>
+
+        <!-- Overlay -->
+        <div class="fixed top-0 left-0 min-w-full h-[100vh] bg-white bg-opacity-10 z-[5]  Overlay" onclick="closeModal()"></div>
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/f46d05f2d5.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
